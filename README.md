@@ -5,7 +5,7 @@ CSV Data to HTML Report converter - TypeScript App
 - CSV Data => Load => Parse => Analyze => Report
 - TypeScript => Type Definition File => JS Library
 - TypeScript => Type Definition File => Node JS Standard Library => fs, http, os
-
+- Parse 'string' => ```.split('\n')``` => string[] => ```.map() + .split(',')``` => string[][]
 ----
 
 ### Required
