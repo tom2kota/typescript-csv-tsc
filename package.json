@@ -1,7 +1,7 @@
 {
   "name": "typescript-csv2html-tsc",
   "version": "1.0.0",
-  "description": "CSV Data to HTML Report converter - TypeScript App",
+  "description": "CSV Dataset to HTML Report converter - TypeScript App",
   "main": "./build/index.js",
   "scripts": {
     "start:build": "tsc -w",

@@ -1,6 +1,7 @@
 import fs from "fs"
+import {MatchResult} from "./MatchResult";
 
-const matches = fs
+const matchesData = fs
     .readFileSync('./data/data.csv', {
         encoding: 'utf-8'
     })
@@ -9,6 +10,14 @@ const matches = fs
         (row: string): string[] => row.split(',')
     )
 
-console.log('CSV DATA:')
-console.log(matches)
-console.log(typeof matches)
+let arsenalWins = 0
+
+for (let match of matchesData) {
+    if (match[1] === 'Arsenal' && match[5] === MatchResult.HomeWin) {
+        arsenalWins++
+    } else if (match[2] === 'Arsenal' && match[5] === MatchResult.AwayWin) {
+        arsenalWins++
+    }
+}
+
+console.log(`Arsenal wins: ${arsenalWins} times`)

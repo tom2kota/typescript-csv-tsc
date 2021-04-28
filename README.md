@@ -1,11 +1,12 @@
 # TypeScript CSV 2 HTML
 
-CSV Data to HTML Report converter - TypeScript App
+CSV Dataset to HTML Report converter - TypeScript App
 
-- CSV Data => Load => Parse => Analyze => Report
+- CSV Dataset => Load => Parse => Analyze => Report
 - TypeScript => Type Definition File => JS Library
 - TypeScript => Type Definition File => Node JS Standard Library => fs, http, os
 - Parse 'string' => ```.split('\n')``` => string[] => ```.map() + .split(',')``` => string[][]
+
 ----
 
 ### Required
@@ -17,7 +18,6 @@ CSV Data to HTML Report converter - TypeScript App
 * [Concurrently](https://www.npmjs.com/package/concurrently)
 * [fs.readFileSync(path[, options])fs.readFileSync(path[, options])](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options)
 * [@types/node](https://www.npmjs.com/package/@types/node)
-* []()
 * []()
 
 ------
@@ -94,3 +94,15 @@ Type annotation (when type 'any', bool | number) / Type inference (TypeScript gu
     - objects (interfaces, Date)
     - classes
     - arrays ([], Tuples => [string, boolean, number])
+
+-----------------------
+
+# [Enums](https://www.typescriptlang.org/docs/handbook/enums.html)
+
+**Enumeration - collections of closely related values**
+
+- follow near-identical syntax rules as normal objects
+- creates an object with the sane keys and values when converted from TS to JS
+- primary goal is to signal to other engineers that these are all closely related values
+- use whenever we have a small fixed set of values that are all closely related and known at compile time
+
