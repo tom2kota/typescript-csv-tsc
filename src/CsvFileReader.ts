@@ -20,16 +20,19 @@ export default class CsvFileReader {
             .map(
                 (row: string): string[] => row.split(',')
             )
-            .map(
-                (row: string[]): MatchData => [
-                    dateStringToDate(row[0]),
-                    row[1],
-                    row[2],
-                    parseInt(row[3]),
-                    parseInt(row[4]),
-                    row[5] as MatchResult,
-                    row[6]
-                ]
-            )
+            .map(this.mapRow)
+    }
+
+    // helper function
+    mapRow(row: string[]): MatchData {
+        return [
+            dateStringToDate(row[0]),
+            row[1],
+            row[2],
+            parseInt(row[3]),
+            parseInt(row[4]),
+            row[5] as MatchResult,
+            row[6]
+        ]
     }
 }
