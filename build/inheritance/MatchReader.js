@@ -1,6 +1,6 @@
 "use strict";
 /**
- * subclass of abstract class CsvFileReader knows how structured exact .csv file
+ * subclass of abstract class CsvFileReaderTs knows how structured exact .csv file
  * helper function with a reference to fs.map() converts row data to appropriate type
  */
 var __extends = (this && this.__extends) || (function () {
@@ -23,7 +23,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var CsvFileReader_1 = __importDefault(require("./CsvFileReader"));
-var utils_1 = require("./utils");
+var utils_1 = require("../utils");
 var matchReader = /** @class */ (function (_super) {
     __extends(matchReader, _super);
     function matchReader() {

@@ -116,9 +116,35 @@ Type annotation (when type 'any', bool | number) / Type inference (TypeScript gu
 - allows us to define the type of property/argument/return value at a future point
 - used heavily when writing reusable code
 
-
 -----
 
+# Code Refactoring
+
+## Inheritance vs Composition
+
+### Inheritance - inheriting from the parent class - characterized by an `is a` relationship between two classes
+
+Change path `"main": "./build/inheritance/index.js",` in [package.json](package.json)
+
+abstract class CsvFileReader{read(): void; mapRow(string[]): MatchData} => (1) & (2)
+
+1) class MatchReader {mapRow(string[]): MatchData}
+2) class MovieReader {mapRow(string[]): MovieData}
+
+### Composition - characterized by a `has a` relationship between two classes
+
+Change path `"main": "./build/composition/index.js",` in [package.json](package.json)
+
+interface DataReader {read(): void; data: string[][]} => (1)
+
+1) class MatchReader {reader:DataReader; load():void}
+
+class ApiReader {read(): void; data: string[][]} => (1)
+class CsvFileReader {read(): void; data: string[][]} => (1)
+
+> Benefit of this approach - easily swap in different styles of readers to customize how class MatchReader behave
 
 
-nothing to do with ...
+----
+
+nothing to do with ... lean on
