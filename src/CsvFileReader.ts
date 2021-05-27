@@ -1,15 +1,21 @@
+/**
+ * You can use this class for opening of .csv files
+ * abstract class - never going to use to create an instance of an object (new CsvFileReader())
+ * use abstract methods:
+ * - read(): void
+ * - mapRow(row: string[]): MatchData
+ */
+
 import fs from "fs";
-import {dateStringToDate} from "./utils";
-import {MatchResult} from "./MatchResult";
 
-// Type Guard with Tuple type for Type parser
-type  MatchData = [Date, string, string, number, number, MatchResult, string]
+export default abstract class CsvFileReader<Type> {
+    data: Type[] = [];
 
-export default class CsvFileReader {
     constructor(public filename: string) {
     }
 
-    data: MatchData[] = [];
+    // helper function with a reference to fs.map() converts row data to appropriate type
+    abstract mapRow(row: string[]): Type
 
     read(): void {
         this.data = fs
@@ -23,16 +29,4 @@ export default class CsvFileReader {
             .map(this.mapRow)
     }
 
-    // helper function
-    mapRow(row: string[]): MatchData {
-        return [
-            dateStringToDate(row[0]),
-            row[1],
-            row[2],
-            parseInt(row[3]),
-            parseInt(row[4]),
-            row[5] as MatchResult,
-            row[6]
-        ]
-    }
 }

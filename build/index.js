@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var MatchResult_1 = require("./MatchResult");
-var CsvFileReader_1 = __importDefault(require("./CsvFileReader"));
-var reader = new CsvFileReader_1.default('./data/data.csv');
+var MatchReader_1 = __importDefault(require("./MatchReader"));
+var reader = new MatchReader_1.default('./data/data.csv');
 reader.read(); // to open .csv file, read info, assign it to data property
 var arsenalWins = 0;
 for (var _i = 0, _a = reader.data; _i < _a.length; _i++) {

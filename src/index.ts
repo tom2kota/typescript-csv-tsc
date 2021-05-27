@@ -1,7 +1,7 @@
 import {MatchResult} from "./MatchResult";
-import CsvFileReader from "./CsvFileReader";
+import MatchReader from "./MatchReader";
 
-const reader = new CsvFileReader('./data/data.csv')
+const reader = new MatchReader('./data/data.csv')
 reader.read() // to open .csv file, read info, assign it to data property
 
 let arsenalWins = 0

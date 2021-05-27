@@ -106,3 +106,19 @@ Type annotation (when type 'any', bool | number) / Type inference (TypeScript gu
 - primary goal is to signal to other engineers that these are all closely related values
 - use whenever we have a small fixed set of values that are all closely related and known at compile time
 
+-----------------------
+
+# [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+
+**TypeScript supports [generic programming](https://en.wikipedia.org/wiki/Generic_programming).**
+
+- like function arguments, but for types in class/function definitions
+- allows us to define the type of property/argument/return value at a future point
+- used heavily when writing reusable code
+
+
+-----
+
+
+
+nothing to do with ...
