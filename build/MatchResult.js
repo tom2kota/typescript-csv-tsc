@@ -4,7 +4,7 @@ exports.MatchResult = void 0;
 // Enumeration - collections of closely related values
 var MatchResult;
 (function (MatchResult) {
-    MatchResult["HomeWin"] = "H";
-    MatchResult["AwayWin"] = "A";
-    MatchResult["Draw"] = "D";
-})(MatchResult = exports.MatchResult || (exports.MatchResult = {}));
+  MatchResult["HomeWin"] = "H";
+  MatchResult["AwayWin"] = "A";
+  MatchResult["Draw"] = "D";
+})((MatchResult = exports.MatchResult || (exports.MatchResult = {})));
