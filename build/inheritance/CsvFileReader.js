@@ -19,10 +19,10 @@ var CsvFileReader = /** @class */ (function () {
     CsvFileReader.prototype.read = function () {
         this.data = fs_1.default
             .readFileSync(this.filename, {
-            encoding: 'utf-8'
+            encoding: "utf-8",
         })
-            .split('\n')
-            .map(function (row) { return row.split(','); })
+            .split("\n")
+            .map(function (row) { return row.split(","); })
             .map(this.mapRow);
     };
     return CsvFileReader;

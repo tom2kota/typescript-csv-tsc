@@ -37,7 +37,7 @@ var matchReader = /** @class */ (function (_super) {
             parseInt(row[3]),
             parseInt(row[4]),
             row[5],
-            row[6]
+            row[6],
         ];
     };
     return matchReader;

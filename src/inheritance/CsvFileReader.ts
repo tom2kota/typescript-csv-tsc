@@ -9,24 +9,20 @@
 import fs from "fs";
 
 export default abstract class CsvFileReader<Type> {
-    data: Type[] = [];
+  data: Type[] = [];
 
-    constructor(public filename: string) {
-    }
+  constructor(public filename: string) {}
 
-    // helper function with a reference to fs.map() converts row data to appropriate type
-    abstract mapRow(row: string[]): Type
+  // helper function with a reference to fs.map() converts row data to appropriate type
+  abstract mapRow(row: string[]): Type;
 
-    read(): void {
-        this.data = fs
-            .readFileSync(this.filename, {
-                encoding: 'utf-8'
-            })
-            .split('\n')
-            .map(
-                (row: string): string[] => row.split(',')
-            )
-            .map(this.mapRow)
-    }
-
+  read(): void {
+    this.data = fs
+      .readFileSync(this.filename, {
+        encoding: "utf-8",
+      })
+      .split("\n")
+      .map((row: string): string[] => row.split(","))
+      .map(this.mapRow);
+  }
 }
