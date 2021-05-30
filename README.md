@@ -131,6 +131,20 @@ abstract class CsvFileReader{read(): void; mapRow(string[]): MatchData} => (1) &
 1) class MatchReader {mapRow(string[]): MatchData}
 2) class MovieReader {mapRow(string[]): MovieData}
 
+#### Inheritance
+
+![inheritance](static/images/inheritance.svg)
+
+#### Composition
+
+![composition](static/images/composition.svg)
+
+
+#### Interfaces
+
+![interfaces](static/images/interfaces.svg)
+
+
 ### Composition - characterized by a `has a` relationship between two classes
 
 Change path `"main": "./build/composition/index.js",` in [package.json](package.json)

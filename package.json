@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CSV Dataset to HTML Report converter - TypeScript App",
   "alternative": "./build/inheritance/index.js",
-  "main": "./build/composition/index.js",
+  "main": "./build/interfaces/index.js",
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon build/index.js",
